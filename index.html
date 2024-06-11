@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Electron lingering shadow repro</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <script>
+      setInterval(() => document.body.dataset.text = '|'.repeat(Math.sin(Date.now() / 100) * 100), 100);
+    </script>
+  </body>
+</html>
